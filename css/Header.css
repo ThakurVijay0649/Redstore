@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&family=Ubuntu:wght@300;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+ 
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:darkmagenta;
+}
+
+::-webkit-scrollbar-track{
+    background:#dddddd;
+}
+
+body {
+    background-image: linear-gradient(to right, #9898ad, #8b1169);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 14px;
+    background-image: linear-gradient(to left, #9898ad, #8b1169);
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+nav .logo {}
+
+nav .logo img {
+    width: 10rem;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+nav ul li {
+    list-style: none;
+    padding: 0 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    transition: all 0.5s;
+}
+
+nav ul li a:hover{
+    color: #8b1169;
+}
+
+nav ul li a img {
+    width: 30px;
+}
+
+nav span {
+    color: white;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0px 9px;
+    font-size: 1.5rem;
+    display: none;
+}
+
+.showMenu {
+    max-height: 70vh;
+}
+
+@media screen and (max-width:770px) {
+    nav ul {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        top: 100%;
+        background-image: linear-gradient(to left, #9898ad, #8b1169);
+        flex-direction: column;
+        align-items: flex-start;
+        z-index: 1;
+        max-height: 0px;
+        transition: all 0.5s;
+        overflow: hidden;
+    }
+
+    nav ul li {
+        padding: 10px 1rem !important;
+    }
+    nav span{
+        display: block;
+    }
+}

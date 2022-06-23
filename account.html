@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RedStore - Home</title>
+    <link rel="stylesheet" href="css/Header.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="https://kit.fontawesome.com/069b45b725.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- header section  -->
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" alt=""></a>
+            </div>
+            <ul id="navItems">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="details.html">Details</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="account.html">Account</a></li>
+                <li><a href="cart.html"><img src="images/cart.png" alt=""></a></li>
+            </ul>
+            <span onclick="toggleMenu()">&#9776;</span>
+        </nav>
+    </header>
+    <!-- main body section  -->
+    <main>
+        <section class="firstSection contact-section">
+            <div class="right">
+                <img src="images/image1.png" alt="">
+            </div>
+            <div class="account">
+                <div class="heading">
+                    <h1 onclick="login()" id="loginId" style="cursor: pointer;">Login</h1>
+                    <h1 onclick="signup()" id="signupId" style="cursor: pointer;">Sign Up</h1>
+                </div>
+                <div class="account-form">
+                    <div class="login" id="login">
+                        <form action="">
+                            <input type="email" placeholder="Email" required>
+                            <input type="password" placeholder="Password" required>
+                            <a href="">forgotten password?</a>
+                            <button type="submit">Log in</button>
+                        </form>
+                    </div>
+                    <div class="signup" id="signup">
+                        <form action="">
+                            <input type="text" placeholder="Name" required>
+                            <input type="email" placeholder="Email" required>
+                            <input type="password" placeholder="Password" required>
+                            <button type="submit">Create Account</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- footer section  -->
+
+    <footer>
+        <div class="footer-row">
+            <div class="footer-col">
+                <h3>Download Our App</h3>
+                <p>Dowload App for Android and IOS Mobile Phone</p>
+                <div class="app-img">
+                    <img src="images/play-store.png" alt="">
+                    <img src="images/app-store.png" alt="">
+                </div>
+            </div>
+            <div class="footer-col">
+                <img src="images/logo-white.png" alt="">
+                <p>Our purpose is to sustainably make the pleasure and benefits of Sports Accessible to the Many</p>
+            </div>
+            <div class="footer-col">
+                <h2>Useful Links</h2>
+                <ul>
+                    <li><a href="">Coupons</a></li>
+                    <li><a href="">Blog Post</a></li>
+                    <li><a href="">Return Policy</a></li>
+                    <li><a href="">Join Affiliate</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h2>Follow Us</h2>
+                <ul>
+                    <li><a href="">Facebook</a></li>
+                    <li><a href="">Twitter</a></li>
+                    <li><a href="">Instagram</a></li>
+                    <li><a href="">Youtube</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-para">
+            <p>Copyright &copy; 2022-RedStore, Inc. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script>
+        let menu = document.getElementById("navItems");
+        let loginpage = document.getElementById("login");
+        let signuppage = document.getElementById("signup")
+        let loginId = document.getElementById("loginId")
+        let signupId = document.getElementById("signupId")
+        loginId.style.backgroundColor = "#040449"
+        function toggleMenu() {
+            menu.classList.toggle("showMenu")
+        }
+        function login() {
+            loginpage.style.transform = "translateX(0%)"
+            signuppage.style.transform = "translateX(5%)"
+            loginId.style.backgroundColor = "#040449"
+            signupId.style.backgroundColor = "transparent"
+
+        }
+
+        function signup() {
+            loginpage.style.transform = "translateX(-105%)"
+            signuppage.style.transform = "translateX(-100%)"
+            signupId.style.backgroundColor = "#040449"
+            loginId.style.backgroundColor = "transparent"
+        }
+    </script>
+
+</body>
+
+</html>
